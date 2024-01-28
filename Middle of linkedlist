@@ -1,16 +1,16 @@
 ListNode* middleNode(ListNode* head) {
-    	int n = 0;
-    	ListNode* temp = head;
-    	while(temp) {
-        	n++;
-        		temp = temp->next;
-    	}
-   	 
-    	temp = head;
-   	 
-    	for(int i = 0; i < n / 2; i++) {
-        		temp = temp->next;
-    	}
-   	 
-    	return temp;
-	}
+        ListNode* trav=head;
+    int count=0;
+    while(trav!=NULL){
+        trav=trav->next;
+        count++;
+    }
+        int temp=0;
+        ListNode* travE=head;
+        while(temp<count/2){
+            travE=travE->next;
+            temp++;
+        }
+        return travE;
+       
+    }
